@@ -40,7 +40,7 @@ A comprehensive backend service for user management with authentication, built w
 
 ### 🧩 Step 1: Clone the Repository
 ```bash
-git clone <your-repository-url>
+git clone (https://github.com/Aleazer1997/user-mgmt)
 cd user-management-system
 ```
 
