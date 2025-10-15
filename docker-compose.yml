@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DB_HOST=mongodb
+      - DB_PORT=27017
+      - DB_NAME=user_management
+    depends_on:
+      - mongodb
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+  mongodb:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=user_management
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:
