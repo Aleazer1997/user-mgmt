@@ -36,41 +36,85 @@ A comprehensive backend service for user management with authentication, built w
 - Docker Compose
 
 
-cp .env.example .env
+## 🚀 Method 1: Using Docker (Recommended)
 
-Method 1: Using Docker (Recommended)
-# Clone the repository
+### 🧩 Step 1: Clone the Repository
+```bash
 git clone <your-repository-url>
 cd user-management-system
+```
 
-# Copy environment file
-Copy the `.env.example` file to `.env` and update the values:
+---
 
-# Edit environment variables
-# Update .env file with your credentials (see below)
+### ⚙️ Step 2: Setup Environment Variables
+Copy the example environment file and update your credentials:
+```bash
+cp .env.example .env
+```
 
-# Build and start containers
+Now open `.env` and edit the values as needed (e.g., database, API keys, etc.).
+
+---
+
+### 🐳 Step 3: Build & Start the Containers
+```bash
 docker-compose up --build
+```
 
-# The API will be available at http://localhost:3000
+This command will build the Docker images and start all services defined in `docker-compose.yml`.
 
-Method 2: Manual Setup
-# Clone the repository
+---
+
+### 🌐 Step 4: Access the Application
+After the containers are running, open your browser and go to:
+
+👉 [http://localhost:3000](http://localhost:3000)
+
+Your API should now be up and running!
+
+
+## ⚙️ Method 2: Manual Setup
+
+### 🧩 Step 1: Clone the Repository
+```bash
 git clone <your-repository-url>
 cd user-management-system
+```
 
-# Install dependencies
+---
+
+### 📦 Step 2: Install Dependencies
+```bash
 npm install
+```
 
-# Copy environment file
+---
+
+### ⚙️ Step 3: Setup Environment Variables
+Copy the example environment file and update your credentials:
+```bash
 cp .env.example .env
+```
+Then open `.env` and fill in your configuration values (e.g., MongoDB URI, API keys, etc.).
 
-# Edit environment variables
-# Update .env file with your credentials
+---
 
-# Start MongoDB service (see MongoDB setup below)
+### 🗄️ Step 4: Start MongoDB Service
+Ensure MongoDB is installed and running on your system.  
+Refer to your local setup guide or MongoDB documentation if needed.
 
-# Start the application
+---
+
+### 🚀 Step 5: Start the Application
+```bash
 npm run dev
+```
 
-# The API will be available at http://localhost:3000
+---
+
+### 🌐 Step 6: Access the API
+Once the application starts, open your browser and go to:
+
+👉 [http://localhost:3000](http://localhost:3000)
+
+Your API should now be running locally!
