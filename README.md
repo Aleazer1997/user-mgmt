@@ -35,8 +35,42 @@ A comprehensive backend service for user management with authentication, built w
 - Docker
 - Docker Compose
 
-### Environment Variables
+
+cp .env.example .env
+
+Method 1: Using Docker (Recommended)
+# Clone the repository
+git clone <your-repository-url>
+cd user-management-system
+
+# Copy environment file
 Copy the `.env.example` file to `.env` and update the values:
 
-```bash
+# Edit environment variables
+# Update .env file with your credentials (see below)
+
+# Build and start containers
+docker-compose up --build
+
+# The API will be available at http://localhost:3000
+
+Method 2: Manual Setup
+# Clone the repository
+git clone <your-repository-url>
+cd user-management-system
+
+# Install dependencies
+npm install
+
+# Copy environment file
 cp .env.example .env
+
+# Edit environment variables
+# Update .env file with your credentials
+
+# Start MongoDB service (see MongoDB setup below)
+
+# Start the application
+npm run dev
+
+# The API will be available at http://localhost:3000
